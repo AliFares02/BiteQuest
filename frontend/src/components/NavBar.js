@@ -1,13 +1,24 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React from 'react';
+import { GiKnifeFork } from "react-icons/gi";
+import { Link, useNavigate } from 'react-router-dom';
 
 const NavBar = () => {
+  const navigate = useNavigate();
   return (
     <nav>
-      This is the navbar
-      <Link to='/'>Home</Link>
-      <Link to='/random'>Pick food for me</Link>
-      <Link to='/about'>About</Link>
+       <div className="company-name" >
+        <GiKnifeFork className='main-logo' onClick={() => navigate('/')}/>
+        <h2 onClick={() => navigate('/')}>BiteQuest</h2>
+       </div>
+       <div style={{display:'flex', alignItems:'center', gap:'5px', marginRight:'6px'}}>
+        <Link style={{color:'white'}} to='/'>Home</Link>
+        <p>|</p>
+        <Link style={{color:'white'}} to='/random'>Let Us Choose for You</Link>
+        <p>|</p>
+        <Link style={{color:'white'}} to='/roulette'>Roulette</Link>
+        <p>|</p>
+        <Link style={{color:'white'}} to='/about'>About</Link>
+       </div>
     </nav>
   )
 }
