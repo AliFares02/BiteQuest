@@ -103,14 +103,17 @@ p{
   flex-direction: column;
   align-items: center;
 }
+
 .randomFood-image{
   border-radius: 10px;
   border: 2px solid #882346;
   width: 400px;
   height: 400px;
   object-fit: cover; 
-  /* for aspect ratio */
+  /* for aspect ratio 
+*/
 }
+
 button{
   background-color: #c6d6e1;
   font-weight: bolder;
@@ -133,6 +136,36 @@ button:active{
   background-color: rgb(178, 43, 72);
   font-weight: bolder;
   font-size: large;
+  padding: 8px 8px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.directions{
+  color: black ;
+  background-color: #c6d6e1;
+  position:relative; top:20px;
+  font-weight: bolder;
+  font-size: larger;
+  padding: 10px 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  border: 2px solid #882346;
+  box-shadow: 0px 5px 15px 0px rgba(106, 4, 65, 0.5);
+}
+.directions:hover{
+  color:black;
+  background-color: rgb(120, 178, 241);
+  font-weight: bolder;
+  font-size: larger;
+  padding: 10px 10px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.directions:active{
+  color:black;
+  background-color: rgb(178, 43, 72);
+  font-weight: bolder;
+  font-size: larger;
   padding: 8px 8px;
   border-radius: 6px;
   cursor: pointer;
