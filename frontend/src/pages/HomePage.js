@@ -15,8 +15,11 @@ const HomePage = () => {
     { name: "Bake and Things", keyTerms: ['trini', 'caribbean' ] },
     { name: "Fisherman's Cove", keyTerms: ['jamaican', 'caribbean'] },
     { name: "Pronto Cafe", keyTerms: ['breakfast', 'dessert'] },
-    { name: "Brooklyn's Best Eat", keyTerms: ['sandwiches'] },
-    { name: "Chipotle", keyTerms: ['mexican'] }
+    { name: "Brooklyn's Best Eat", keyTerms: ['sandwiches', 'deli'] },
+    { name: "Chipotle", keyTerms: ['mexican', 'fast food'] },
+    { name: "Ital Fusion", keyTerms: ['vegetarian', 'caribbean'] },
+    { name: "Ovi's Place", keyTerms: ['spanish', 'juice bar'] },
+    { name: "Jupioca", keyTerms: ['juice bar', 'fruit bowls'] }
   ];
   const firstNames = ["Alex", "Jordan", "Casey", "Drew", "Pat", "Sam", "Taylor", "Jamie", "Morgan", "Chris"];
   const quotes = [
