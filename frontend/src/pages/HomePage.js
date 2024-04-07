@@ -13,7 +13,6 @@ const HomePage = () => {
     { name: "Five Guys", keyTerms: ['fast food'] },
     { name: "Island Burger", keyTerms: ['fast food'] },
     { name: "Bake and Things", keyTerms: ['seafood'] },
-    { name: "Fisherman's Cove", keyTerms: ['jamaican'] },
     { name: "Five Guys", keyTerms: ['fast food', 'burgers'] },
     { name: "Island Burger", keyTerms: ['fast food', 'caribbean'] },
     { name: "Bake and Things", keyTerms: ['trini', 'caribbean' ] },
