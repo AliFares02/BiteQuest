@@ -12,7 +12,7 @@ const HomePage = () => {
     { name: "AppleBee's", keyTerms: ['fast food'] },
     { name: "Five Guys", keyTerms: ['fast food'] },
     { name: "Island Burger", keyTerms: ['fast food'] },
-    { name: "Bake & Things", keyTerms: ['seafood'] },
+    { name: "Bake and Things", keyTerms: ['seafood'] },
     { name: "Fisherman's Cove", keyTerms: ['jamaican'] },
     { name: "Pronto Cafe", keyTerms: ['breakfast', 'dessert'] },
     { name: "Brooklyn's Best Eat", keyTerms: ['sandwiches'] },
