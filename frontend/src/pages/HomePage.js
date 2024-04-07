@@ -6,17 +6,20 @@ const HomePage = () => {
   const restaurants = [
     { name: "Pizza Hut", keyTerms: ['pizza', 'fast food'] },
     { name: "Teriyaki One", keyTerms: ['asian'] },
-    { name: "Panda Express", keyTerms: ['asian'] },
+    { name: "Panda Express", keyTerms: ['asian', 'fast food'] },
     { name: "Ashoka Grill", keyTerms: ['indian', 'halal'] },
     { name: "Burger King", keyTerms: ['fast food'] },
     { name: "AppleBee's", keyTerms: ['fast food'] },
-    { name: "Five Guys", keyTerms: ['fast food'] },
-    { name: "Island Burger", keyTerms: ['fast food'] },
-    { name: "Bake & Things", keyTerms: ['seafood'] },
-    { name: "Fisherman's Cove", keyTerms: ['jamaican'] },
+    { name: "Five Guys", keyTerms: ['fast food', 'burgers'] },
+    { name: "Island Burger", keyTerms: ['fast food', 'caribbean'] },
+    { name: "Bake and Things", keyTerms: ['trini', 'caribbean' ] },
+    { name: "Fisherman's Cove", keyTerms: ['jamaican', 'caribbean'] },
     { name: "Pronto Cafe", keyTerms: ['breakfast', 'dessert'] },
-    { name: "Brooklyn's Best Eat", keyTerms: ['sandwiches'] },
-    { name: "Chipotle", keyTerms: ['mexican'] }
+    { name: "Brooklyn's Best Eat", keyTerms: ['sandwiches', 'deli'] },
+    { name: "Chipotle", keyTerms: ['mexican', 'fast food'] },
+    { name: "Ital Fusion", keyTerms: ['vegetarian', 'caribbean'] },
+    { name: "Ovi's Place", keyTerms: ['spanish', 'juice bar'] },
+    { name: "Jupioca", keyTerms: ['juice bar', 'fruit bowls'] }
 ];
 const [filteredData, setFilteredData] = useState(restaurants)
 const searchForRestaurant = (e) => {
