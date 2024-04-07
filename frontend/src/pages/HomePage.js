@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { FaExternalLinkAlt } from "react-icons/fa";
 
 const HomePage = () => {
@@ -15,19 +15,61 @@ const HomePage = () => {
     { name: "Bake and Things", keyTerms: ['trini', 'caribbean' ] },
     { name: "Fisherman's Cove", keyTerms: ['jamaican', 'caribbean'] },
     { name: "Pronto Cafe", keyTerms: ['breakfast', 'dessert'] },
-    { name: "Brooklyn's Best Eat", keyTerms: ['sandwiches', 'deli'] },
-    { name: "Chipotle", keyTerms: ['mexican', 'fast food'] },
-    { name: "Ital Fusion", keyTerms: ['vegetarian', 'caribbean'] },
-    { name: "Ovi's Place", keyTerms: ['spanish', 'juice bar'] },
-    { name: "Jupioca", keyTerms: ['juice bar', 'fruit bowls'] }
-];
-const [filteredData, setFilteredData] = useState(restaurants)
-const searchForRestaurant = (e) => {
+    { name: "Brooklyn's Best Eat", keyTerms: ['sandwiches'] },
+    { name: "Chipotle", keyTerms: ['mexican'] }
+  ];
+  const firstNames = ["Alex", "Jordan", "Casey", "Drew", "Pat", "Sam", "Taylor", "Jamie", "Morgan", "Chris"];
+  const quotes = [
+    { text: "The food is so good, I recommend the cheese burger!", category: 'fast food', exclusiveTo: 'Burger King' },
+    { text: "Can't get enough of their burgers!", category: 'fast food', exclusiveTo: 'Five Guys' },
+    { text: "The best pizza I've ever had!", category: 'pizza' },
+    { text: "Incredible service and unforgettable flavors.", category: 'general' },
+    { text: "Their seafood menu is a game changer.", category: 'seafood' },
+    { text: "The best thing I've ever had!", category: "general" },
+    { text: "Brooklyn's Best Eat", category: 'sandwiches' },
+    { text: " Best sandwiches Eat", category: 'sandwiches' },
+    { text: " Best dessert Ever!", category: 'dessert' },
+  ];
+  const [randomQuote, setRandomQuote] = useState(null);
+  const [randomRestaurant, setRandomRestaurant] = useState(null);
+  const [randomName, setRandomName] = useState(() => firstNames[Math.floor(Math.random() * firstNames.length)]);
+
+  const [filteredData, setFilteredData] = useState(restaurants)
+  const searchForRestaurant = (e) => {
   const searchQuery = e.target.value.toLowerCase();
   setFilteredData(restaurants.filter((item) => {
       return item.keyTerms.some((keyTerm) => keyTerm.toLowerCase().startsWith(searchQuery));
   }));
-};
+  }
+  const getRandomRestaurantAndQuote = () => {
+    const randomRestaurantIndex = Math.floor(Math.random() * restaurants.length);
+    const selectedRestaurant = restaurants[randomRestaurantIndex];
+    setRandomRestaurant(selectedRestaurant);
+    const exclusiveQuote = quotes.find(quote => quote.exclusiveTo === selectedRestaurant.name);
+    if (exclusiveQuote) {
+      setRandomQuote(exclusiveQuote);
+      return;
+    }
+    const matchingQuotes = quotes.filter(quote =>
+      selectedRestaurant.keyTerms.includes(quote.category) || quote.category === 'general'
+    );
+    const randomQuoteIndex = Math.floor(Math.random() * matchingQuotes.length);
+    setRandomQuote(matchingQuotes[randomQuoteIndex]);
+  };
+
+  const getRandomName = () => {
+    const randomIndex = Math.floor(Math.random() * firstNames.length);
+    setRandomName(firstNames[randomIndex]);
+  };
+
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      getRandomRestaurantAndQuote();
+    }, 60000);
+    getRandomRestaurantAndQuote();
+    getRandomName();
+    return () => clearInterval(intervalId);
+  }, []);
   return (
     <div className='homepage-content-container '>
       <h1>Home</h1>
@@ -58,10 +100,23 @@ const searchForRestaurant = (e) => {
       </div>
       <div style={{display:'flex', justifyContent:'center', alignItems:'center', flexDirection:'column', height:'50%', width:'90%'}}>
         <div>
-          <h3>Select from our comunity recomended option</h3>
+          <h3>Community recommendations</h3>
         </div>
         <div className='pick-food-container '>
-          recomended content goes here
+          {randomRestaurant && (
+          <h3 style={{ margin: '10px 0', color: "#882346" }}>
+            Featured Spot: {randomRestaurant.name}
+          </h3>
+          )}
+          {randomQuote && (
+            <div style={{ color: "#555", }}> 
+              <p style={{fontStyle: 'italic' }}>{`"${randomQuote.text}"`}</p>
+              <p style={{ marginTop: '4px' }}>
+                {}
+                <strong> - {randomName}</strong>  Food Category: {randomRestaurant.keyTerms.join(', ')}
+              </p>
+            </div>
+          )}
         </div>
       </div>
       
@@ -70,4 +125,4 @@ const searchForRestaurant = (e) => {
   )
 }
 
-export default HomePage
+export default HomePage;

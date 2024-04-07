@@ -65,6 +65,8 @@ a:hover {
   border-radius: 5px;
   display: flex;
   flex-direction: column;
+  box-shadow: 0px 0px 7px rgba(0, 0, 0, .7);
+  
 }
 
 .search-bar {
@@ -82,6 +84,10 @@ a:hover {
   border: 2px solid #882346;
   border-radius: 5px;
   display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: 0px 0px 7px rgba(0, 0, 0, .7);
 }
 
 .randomFoodPage-container{
@@ -103,15 +109,18 @@ p{
   flex-direction: column;
   align-items: center;
 }
+
 .randomFood-image{
   border-radius: 10px;
   border: 2px solid #882346;
   width: 400px;
   height: 400px;
   object-fit: cover; 
-  /* for aspect ratio */
+  /* for aspect ratio 
+*/
 }
-button{
+
+.btn{
   background-color: #c6d6e1;
   font-weight: bolder;
   font-size: large;
@@ -121,7 +130,7 @@ button{
   border: 2px solid #882346;
   box-shadow: 0px 5px 15px 0px rgba(106, 4, 65, 0.5);
 }
-button:hover{
+.btn:hover{
   background-color: rgb(120, 178, 241);
   font-weight: bolder;
   font-size: large;
@@ -129,11 +138,148 @@ button:hover{
   border-radius: 10px;
   cursor: pointer;
 }
-button:active{
+.btn:active{
   background-color: rgb(178, 43, 72);
   font-weight: bolder;
   font-size: large;
   padding: 8px 8px;
   border-radius: 6px;
   cursor: pointer;
+}
+.directions{
+  color: black ;
+  background-color: #c6d6e1;
+  position:relative; top:20px;
+  font-weight: bolder;
+  font-size: larger;
+  padding: 10px 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  border: 2px solid #882346;
+  box-shadow: 0px 5px 15px 0px rgba(106, 4, 65, 0.5);
+}
+.directions:hover{
+  color:black;
+  background-color: rgb(120, 178, 241);
+  font-weight: bolder;
+  font-size: larger;
+  padding: 10px 10px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.directions:active{
+  color:black;
+  background-color: rgb(178, 43, 72);
+  font-weight: bolder;
+  font-size: larger;
+  padding: 8px 8px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.roulette{
+  margin: 5%;
+  margin-top: 5%;
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  justify-content: space-between;
+ 
+}
+.wheel{
+  text-align: center;
+  margin-left: 10%;
+  border: 2px solid ;
+  border-radius: 5px;
+  height: 80%;
+  width: 80%;
+}
+.circle{
+  height: 80%;
+  width: 80%;
+  font-weight:bolder;
+
+  
+}
+
+.item{
+  width: 25%;
+  padding: 10px;
+  border: 2px solid;
+  border-radius: 5px;
+  
+}
+.addlist{
+  border: 1px solid;
+  border-radius: 2px;
+  padding: 2px;
+}
+.add{
+  top: 10%;
+  width: 50%;
+  height: 10%;
+  border:2px solid #882346;
+  border-radius: 5px;
+  padding: 5px;
+  font-weight: bolder;
+}
+.add:hover{
+  background-color:  #9f395d;
+  font-weight: bolder;
+  font-size: 10px;
+  
+  border-radius: 5px;
+  cursor: pointer;
+}
+.spin {
+  position: absolute;
+  top: 43%;
+  left: 64%;
+  z-index: 1;
+  background-color: #882346;
+  text-transform: uppercase;
+  border: 5px solid #fff;
+  font-weight: bold;
+  font-size: 10px;
+  color: white;
+  width: 50px;
+  height: 50px;
+  font-family: sans-serif;
+  border-radius: 50%;
+  cursor: pointer;
+  outline: none;
+  letter-spacing: 1px;
+}
+h4{
+  text-align: center;
+  font-size: 30px;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(calc(360deg + var(--rotation)));
+  }
+}
+
+
+.spins {
+  
+  animation-duration: 4s; /* Initial duration */
+  animation-iteration-count: 1;
+}
+
+.arrow{
+  width: 0; 
+  height: 0%; 
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  text-align: center;
+  border-top: 50px solid #f00;
+  position: absolute;
+  z-index: 1;
+  
+  left: 65%;
 }
