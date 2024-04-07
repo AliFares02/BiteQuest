@@ -140,7 +140,7 @@ function Roulette() {
               <button onClick={() => removeItem(idx)}><MdDeleteForever style={{Color:'#882346'}}/></button>
             </div>
           ))}
-          <button className="add" onClick={() => addItem('')}>Add</button>
+          <button className="add" onClick={() => addItem('')}>Add a food item</button>
         </div>
         <div className="wheel">
           

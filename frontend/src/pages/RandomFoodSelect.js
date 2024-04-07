@@ -8,7 +8,7 @@ const RandomFoodSelect = () => {
   "Fisherman Cove","Burger King","Pronto Cafe","Ashoka Grill","Island Burger","Bake & Things" ,"Gong Cha" ,"Jupioca","Ovi's Place","McBeans","CC'S Jamaican Restaurant",
   "Ital Fusion"];
 
-  const foodImages=["https://4.bp.blogspot.com/-aRwHuMLWwjU/UG8sWFNtclI/AAAAAAAADIc/3A7ZWHwUVag/s1600/Buona+Journata+Brooklyn+College+Food+Truck+1.JPG",
+  const foodImages=["https://lh3.googleusercontent.com/p/AF1QipNqwnIROUxUjNPakwx8h4fwdhXLK0BsSYuRsVqR=s680-w680-h510",
   "https://lh3.googleusercontent.com/p/AF1QipOpn93zxrHq5OKBs-f4ZXlkDa-m-S6SiPe7H9AA=s680-w680-h510",
   "https://lh3.googleusercontent.com/p/AF1QipOxBbNss6HVKRp1aGewucTwknSDPX3mD2THFDGn=s680-w680-h510",
   "https://lh3.googleusercontent.com/p/AF1QipNdFc73eFDY900NXpzb1yGy52GSR6K0z4DX1qmB=s680-w680-h510",
