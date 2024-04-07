@@ -66,7 +66,6 @@ a:hover {
   display: flex;
   flex-direction: column;
   box-shadow: 0px 0px 7px rgba(0, 0, 0, .7);
-  
 }
 
 .search-bar {
@@ -115,7 +114,8 @@ p{
   border: 2px solid #882346;
   width: 400px;
   height: 400px;
-  object-fit: cover; 
+  object-fit: cover;
+  box-shadow: 0px 0px 7px rgba(0, 0, 0, .7); 
   /* for aspect ratio 
 */
 }
@@ -193,6 +193,7 @@ p{
   border-radius: 5px;
   height: 80%;
   width: 80%;
+  box-shadow: 0px 0px 7px rgba(0, 0, 0, .7);
 }
 .circle{
   height: 80%;
@@ -207,6 +208,7 @@ p{
   padding: 10px;
   border: 2px solid;
   border-radius: 5px;
+  box-shadow: 0px 0px 7px rgba(0, 0, 0, .7);
   
 }
 .addlist{
