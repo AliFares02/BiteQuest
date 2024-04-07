@@ -77,7 +77,7 @@ const RandomFoodSelect = () => {
       <h2>Click the button to generate Random Food</h2>
 
     <div className="randomFood-container">
-      <button onClick={createRandomFood}>Get Random Food</button>
+      <button className="btn" onClick={createRandomFood}>Get Random Food</button>
     </div>
     <p>Random Selected food: {randomFood}</p>
     <img className="randomFood-image" src={randomImage} alt=''/>
